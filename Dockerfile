@@ -6,6 +6,7 @@ RUN apt install python3-pip -y
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
+RUN mv .env.template .env
 RUN pip install -r requirements.txt
 
 # tricks for pytube : https://github.com/elebumm/RedditVideoMakerBot/issues/142 
