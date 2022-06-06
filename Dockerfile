@@ -8,6 +8,7 @@ ADD . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 RUN playwright install && playwright install-deps
+COPY ./background.mp4 /app/assets/mp4/background.mp4
 
 # tricks for pytube : https://github.com/elebumm/RedditVideoMakerBot/issues/142 
 # (NOTE : This is no longer useful since pytube was removed from the dependencies)
